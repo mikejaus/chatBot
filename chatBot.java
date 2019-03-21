@@ -15,7 +15,7 @@ public class Test {
 		do {
 			userInput = JOptionPane.showInputDialog("What do you like about IT?");
 			if (userInput.toLowerCase().contains("?".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "I will be asking the questions"+userName+"!");
+				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
 				
 			} else if (userInput.toLowerCase().contains("Programming".toLowerCase())) {
 				userInput = JOptionPane.showInputDialog("What language of programming is your favorite?");
@@ -43,7 +43,7 @@ public class Test {
 		do {
 			userInput = JOptionPane.showInputDialog("How do you get to uni? e.g. Car, Tram, etc...");
 			if (userInput.toLowerCase().contains("?")) {
-				JOptionPane.showMessageDialog(null, "I will be asking the questions"+userName+"!");
+				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
 	
 			} else if (userInput.toLowerCase().contains("Car".toLowerCase())) {
 				userInput = JOptionPane.showInputDialog("How many years have you been driving?");
@@ -69,7 +69,7 @@ public class Test {
 		do {
 			userInput = JOptionPane.showInputDialog("Where do you like to study?");
 			if (userInput.toLowerCase().contains("?")) {
-				JOptionPane.showMessageDialog(null, "I will be asking the questions"+userName+"!");
+				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
 				
 			} else if (userInput.toLowerCase().contains("Library".toLowerCase())) {
 				JOptionPane.showMessageDialog(null, "Thats a great place to study, mainly because its quiet");
@@ -101,13 +101,42 @@ public class Test {
 		a--;
 		
 		do {
-			userInput = JOptionPane.showInputDialog("Question");
-			if (userInput.toLowerCase().contains("Field".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "Phrase");
-			}
+			userInput = JOptionPane.showInputDialog("What kind of operating system do you use?");
+			if (userInput.toLowerCase().contains("?")) {
+				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
+				
+			} else if (userInput.toLowerCase().contains("Windows".toLowerCase())) {
+				JOptionPane.showMessageDialog(null, "");
+				a++;
 			
+			} else if (userInput.toLowerCase().contains("Mac".toLowerCase())) {
+				JOptionPane.showMessageDialog(null, "");
+				a++;
+				
+			} else if (userInput.toLowerCase().contains("Linux".toLowerCase())) {
+				JOptionPane.showMessageDialog(null, "");
+				a++;
+				
+			} else if (userInput.toLowerCase().contains("".toLowerCase())) {
+				JOptionPane.showMessageDialog(null, "");
+				a++;
+			}
+ 			
 			
 		} while (a == 1);
+		a--;
+		
+		do {
+			userInput = JOptionPane.showInputDialog("");
+			if (userInput.toLowerCase().contains("?")) {
+				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
+				
+			} else if (userInput.toLowerCase().contains("".toLowerCase())) {
+				JOptionPane.showMessageDialog(null, "");
+				a++;
+			}
+			
+		} while (a ==1);
 			
 	}
 		
