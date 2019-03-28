@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Test {
+public class BotClass {
 
 	public static void main(String[] args) {
 		
@@ -9,11 +9,12 @@ public class Test {
 		int a = 1;
 		
 		JOptionPane.showMessageDialog(null, "Welcome to the Chatterbot");
+		
 		userName = JOptionPane.showInputDialog("What is your name?");
 		JOptionPane.showMessageDialog(null, "Hello "+userName+"!");
 		
 		do {
-			userInput = JOptionPane.showInputDialog("What do you like about IT?");
+			userInput = JOptionPane.showInputDialog("What do you like about IT? eg. Programming, Networking, Hacking, Hardware, People");
 			if (userInput.toLowerCase().contains("?".toLowerCase())) {
 				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
 				
@@ -31,7 +32,7 @@ public class Test {
 				a++;
 				
 			} else if (userInput.toLowerCase().contains("Hardware".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "Hardware engineers are smart");
+				JOptionPane.showMessageDialog(null, "Hardware engineering is fun but can be very costly");
 				a++;
 			} else if (userInput.toLowerCase().contains("People".toLowerCase())) {
 				JOptionPane.showMessageDialog(null, "People skills are great to have in the IT industry");
@@ -61,6 +62,15 @@ public class Test {
 			} else if (userInput.toLowerCase().contains("Run".toLowerCase())) {
 				JOptionPane.showMessageDialog(null, "Nice! You must excercise alot");
 				a++;
+			} else if (userInput.toLowerCase().contains("Bike".toLowerCase())) {
+				userInput = JOptionPane.showInputDialog("How far do you have to ride? (in kilometres)");
+				int userDistance = Integer.parseInt(userInput);
+				if (userDistance > 5) {
+					JOptionPane.showMessageDialog(null, "Wow, thats quite a distance");
+				} else if (userDistance < 5) {
+					JOptionPane.showMessageDialog(null, "Ah okay thats not too far");
+				}
+				a++;
 			}
 			
 		} while (a == 1);
@@ -75,10 +85,12 @@ public class Test {
 				JOptionPane.showMessageDialog(null, "Thats a great place to study, mainly because its quiet");
 				a++;
 			} else if (userInput.toLowerCase().contains("University".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "Thats a great place to study, mainly because its quiet");
+				userInput = JOptionPane.showInputDialog(null, "What number building? i personally like 10");
+				JOptionPane.showMessageDialog(null, "Building "+userInput+" is great!");
 				a++;
 			} else if (userInput.toLowerCase().contains("RMIT".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "Thats a great place to study, mainly because its quiet");
+				userInput = JOptionPane.showInputDialog(null, "What number building? i personally like 10");
+				JOptionPane.showMessageDialog(null, "Building "+userInput+" is great!");
 				a++;
 			} else if (userInput.toLowerCase().contains("Home".toLowerCase())) {
 				JOptionPane.showMessageDialog(null, "Being at home makes you more relaxed but you can also get distracted easily");
@@ -101,43 +113,29 @@ public class Test {
 		a--;
 		
 		do {
-			userInput = JOptionPane.showInputDialog("What kind of operating system do you use?");
+			userInput = JOptionPane.showInputDialog("Which operating system do you use?");
 			if (userInput.toLowerCase().contains("?")) {
 				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
 				
 			} else if (userInput.toLowerCase().contains("Windows".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "");
+				JOptionPane.showMessageDialog(null, "Windows is great!");
 				a++;
 			
 			} else if (userInput.toLowerCase().contains("Mac".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "");
+				JOptionPane.showMessageDialog(null, "I was created on a mac!");
 				a++;
 				
 			} else if (userInput.toLowerCase().contains("Linux".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "");
+				JOptionPane.showMessageDialog(null, "Not many people use linux");
 				a++;
 				
-			} else if (userInput.toLowerCase().contains("".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "");
+			} else if (userInput.toLowerCase().contains("Ubuntu".toLowerCase())) {
+				JOptionPane.showMessageDialog(null, "Wow, you're a dinosaur");
 				a++;
 			}
- 			
 			
 		} while (a == 1);
 		a--;
-		
-		do {
-			userInput = JOptionPane.showInputDialog("");
-			if (userInput.toLowerCase().contains("?")) {
-				JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
-				
-			} else if (userInput.toLowerCase().contains("".toLowerCase())) {
-				JOptionPane.showMessageDialog(null, "");
-				a++;
-			}
-			
-		} while (a ==1);
-			
 	}
 		
 }
