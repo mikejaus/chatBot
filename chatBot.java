@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class BotClass {
+public class chatBot {
 
 	public static void main(String[] args) {
 		
