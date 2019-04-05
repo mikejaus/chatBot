@@ -1,73 +1,140 @@
+package chatBot;
+import java.util.Arrays;
+
 import javax.swing.JOptionPane;
 
-public class chatBotNew {
-
+public class chatBot {
 	public static void main(String[] args) {
 
-		String userInput;
-		String qDetection;
-		String userUni;
-		String userIT;
-		String userProgramming;
-		String userJava;
-		String userSports;
-		String userFood;
-		String userWork;
-		String userSchool;
-		String userMusic;
+			String userName;
+			String strSize;
+			String userInput;
+			int a = 1;
 
-		String userName;
-		int a = 1;
+			JOptionPane.showMessageDialog(null, "Welcome to the ChatBot"); // Introductory Phase
+			userName = JOptionPane.showInputDialog("What is your name?"); // Introductory Phase
+			JOptionPane.showMessageDialog(null, "Hello "+userName+"!"); // Introductory Phase
 
-		String[] userInputs = { "Uni", "IT", "Programming", "Java", "Sports", "Food", "Work", "School", "Music"};
-		String inputDetect = userInput;
-		boolean detected;
+			do {
+				strSize = JOptionPane.showInputDialog("How many keywords would you like? (1 - 10)");
+				int arraySize = Integer.parseInt(strSize);
 
+				if (arraySize == 1) {
+					Object[] userInputs = new Object[1];
+					String arrayInput = JOptionPane.showInputDialog("Keyword 1: ");
+					userInputs[0] = arrayInput;
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 2) {
+					Object[] userInputs = new Object[2];
+					String arrayInput = JOptionPane.showInputDialog("Keyword 1: ");
+					String arrayInput2 = JOptionPane.showInputDialog("Keyword 2: ");
+					userInputs[0] = arrayInput;
+					userInputs[1] = arrayInput2;
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 3) {
+					Object[] userInputs = new Object[3];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 4) {
+					Object[] userInputs = new Object[4];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					userInputs[3] = "Java";
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 5) {
+					Object[] userInputs = new Object[5];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					userInputs[3] = "Java";
+					userInputs[4] = "Sports";
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 6) {
+					Object[] userInputs = new Object[6];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					userInputs[3] = "Java";
+					userInputs[4] = "Sports";
+					userInputs[5] = "Food";
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 7) {
+					Object[] userInputs = new Object[7];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					userInputs[3] = "Java";
+					userInputs[4] = "Sports";
+					userInputs[5] = "Food";
+					userInputs[6] = "Work";
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 8) {
+					Object[] userInputs = new Object[8];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					userInputs[3] = "Java";
+					userInputs[4] = "Sports";
+					userInputs[5] = "Food";
+					userInputs[6] = "Work";
+					userInputs[7] = "School";
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 9) {
+					Object[] userInputs = new Object[9];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					userInputs[3] = "Java";
+					userInputs[4] = "Sports";
+					userInputs[5] = "Food";
+					userInputs[6] = "Work";
+					userInputs[7] = "School";
+					userInputs[8] = "Music";
+					System.out.println(Arrays.toString(userInputs));
+					a--;
+					
+				} else if (arraySize == 10) {
+					Object[] userInputs = new Object[10];
+					userInputs[0] = "Uni";
+					userInputs[1] = "IT";
+					userInputs[2] = "Programming";
+					userInputs[3] = "Java";
+					userInputs[4] = "Sports";
+					userInputs[5] = "Food";
+					userInputs[6] = "Work";
+					userInputs[7] = "School";
+					userInputs[8] = "Music";
+					userInputs[9] = "Driving";
+					System.out.println(Arrays.toString(userInputs));
 
-		for (String element:userInputs ) {
-			if (element.equals(inputDetect)) {
-				detected = true;
-			}
-		}
-
-		JOptionPane.showMessageDialog(null, "Welcome to the Chatterbot");
-		userName = JOptionPane.showInputDialog("What is your name?");
-        JOptionPane.showMessageDialog(null, "Hello " + userName + "!");
-
-        do {
-			userInput = JOptionPane.showInputDialog("What would you like to talk about today "+userName+"?");
-			if (userInput.toLowerCase().contains("?")) {
-				qDetection = JOptionPane.showInputDialog("I will be asking the questions "+userName+"!");
-			} else if (userInput.contains("Uni".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about university?");
-
-			} else if (userInput.toLowerCase().contains("IT".toLowerCase())) {
-				userIT = JOptionPane.showInputDialog("What do you like about IT?");
-
-			} else if (userInput.toLowerCase().contains("Programming".toLowerCase())) {
-				userProgramming = JOptionPane.showInputDialog("What do you like about programming?");
-
-			} else if (userInput.toLowerCase().contains("Java".toLowerCase())) {
-				userJava = JOptionPane.showInputDialog("What do you like about Java?");
-
-			} else if (userInput.toLowerCase().contains("Sports".toLowerCase())) {
-				userSports = JOptionPane.showInputDialog("What do you like about sports?");
-
-			} else if (userInput.toLowerCase().contains("Food".toLowerCase())) {
-				userFood = JOptionPane.showInputDialog("What do you like about food?");
-				
-			} else if (userInput.toLowerCase().contains("Work".toLowerCase())) {
-				userWork = JOptionPane.showInputDialog("What do you like about work?");
-
-			} else if (userInput.toLowerCase().contains("School".toLowerCase())) {
-				userSchool = JOptionPane.showInputDialog("What do you like about school?");
-
-			} else if (userInput.toLowerCase().contains("Music".toLowerCase())) {
-				userMusic = JOptionPane.showInputDialog("What do you like about music?");
-
-			}
-            
-		} while (a == 1);
-		a--;
+					userInput = JOptionPane.showInputDialog("What would you like to talk about today "+userName+"?");
+					if (userInput.toLowerCase().contains("?")) {
+						JOptionPane.showMessageDialog(null, "I will be asking the questions "+userName+"!");
+					} else if (Arrays.asList(userInputs).contains(userInput)) {
+						System.out.println("Detected");
+					}
+				} else {
+					JOptionPane.showMessageDialog(null, "That is not a valid input "+userName+"!");
+				}
+			} while (a == 1);
 	}
 }
