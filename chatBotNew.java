@@ -19,8 +19,18 @@ public class chatBotNew {
 		String userName;
 		int a = 1;
 
-		JOptionPane.showMessageDialog(null, "Welcome to the Chatterbot");
+		String[] userInputs = { "Uni", "IT", "Programming", "Java", "Sports", "Food", "Work", "School", "Music"};
+		String inputDetect = userInput;
+		boolean detected;
 
+
+		for (String element:userInputs ) {
+			if (element.equals(inputDetect)) {
+				detected = true;
+			}
+		}
+
+		JOptionPane.showMessageDialog(null, "Welcome to the Chatterbot");
 		userName = JOptionPane.showInputDialog("What is your name?");
         JOptionPane.showMessageDialog(null, "Hello " + userName + "!");
 
@@ -28,7 +38,7 @@ public class chatBotNew {
 			userInput = JOptionPane.showInputDialog("What would you like to talk about today "+userName+"?");
 			if (userInput.toLowerCase().contains("?")) {
 				qDetection = JOptionPane.showInputDialog("I will be asking the questions "+userName+"!");
-			} else if (userInput.toLowerCase().contains("Uni".toLowerCase())) {
+			} else if (userInput.contains("Uni".toLowerCase())) {
 				userUni = JOptionPane.showInputDialog("What do you like about university?");
 
 			} else if (userInput.toLowerCase().contains("IT".toLowerCase())) {
