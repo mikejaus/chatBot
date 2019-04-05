@@ -6,9 +6,15 @@ public class chatBotNew {
 
 		String userInput;
 		String qDetection;
-		String userWork;
 		String userUni;
 		String userIT;
+		String userProgramming;
+		String userJava;
+		String userSports;
+		String userFood;
+		String userWork;
+		String userSchool;
+		String userMusic;
 
 		String userName;
 		int a = 1;
@@ -19,7 +25,7 @@ public class chatBotNew {
         JOptionPane.showMessageDialog(null, "Hello " + userName + "!");
 
         do {
-			userInput = JOptionPane.showInputDialog("So, what would you like to talk about today "+userName+"?");
+			userInput = JOptionPane.showInputDialog("What would you like to talk about today "+userName+"?");
 			if (userInput.toLowerCase().contains("?")) {
 				qDetection = JOptionPane.showInputDialog("I will be asking the questions "+userName+"!");
 			} else if (userInput.toLowerCase().contains("Uni".toLowerCase())) {
@@ -29,25 +35,25 @@ public class chatBotNew {
 				userIT = JOptionPane.showInputDialog("What do you like about IT?");
 
 			} else if (userInput.toLowerCase().contains("Programming".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about programming?");
+				userProgramming = JOptionPane.showInputDialog("What do you like about programming?");
 
 			} else if (userInput.toLowerCase().contains("Java".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about Java?");
+				userJava = JOptionPane.showInputDialog("What do you like about Java?");
 
 			} else if (userInput.toLowerCase().contains("Sports".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about sports?");
+				userSports = JOptionPane.showInputDialog("What do you like about sports?");
 
-			} else if (userInput.toLowerCase().contains("Hacking".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about University?");
+			} else if (userInput.toLowerCase().contains("Food".toLowerCase())) {
+				userFood = JOptionPane.showInputDialog("What do you like about food?");
 				
-			} else if (userInput.toLowerCase().contains("Hacking".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about University?");
+			} else if (userInput.toLowerCase().contains("Work".toLowerCase())) {
+				userWork = JOptionPane.showInputDialog("What do you like about work?");
 
-			} else if (userInput.toLowerCase().contains("Hacking".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about University?");
+			} else if (userInput.toLowerCase().contains("School".toLowerCase())) {
+				userSchool = JOptionPane.showInputDialog("What do you like about school?");
 
-			} else if (userInput.toLowerCase().contains("Hacking".toLowerCase())) {
-				userUni = JOptionPane.showInputDialog("What do you like about University?");
+			} else if (userInput.toLowerCase().contains("Music".toLowerCase())) {
+				userMusic = JOptionPane.showInputDialog("What do you like about music?");
 
 			}
             
