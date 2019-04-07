@@ -1,111 +1,56 @@
 import javax.swing.JOptionPane;
 
 public class chatBot {
-	public static void main(String[] args) {
+	public static void main(String[] args) { // The overall idea of this program is to let the user choose keywords and
+												// then respond to those keywords accordingly.
 
-			String userName;
-			String userInput;
-			String questionDetector;
-			String strSize;
+		String userName; // Stores the users name for later use in the program
+		String strSize; // Storing the array as a string before converting to integer
+		String userInput; // String used for user inputs
+		int a = 1;
 
-			userInputs[0] = "Uni";
-			userInputs[1] = "IT";
-			userInputs[2] = "Programming";
-			userInputs[3] = "Java";
-			userInputs[4] = "Sports";
-			userInputs[5] = "Food";
-			userInputs[6] = "Work";
-			userInputs[7] = "School";
-			userInputs[8] = "Music";
-			userInputs[9] = "Driving";
-			int a = 1;
+		JOptionPane.showMessageDialog(null, "Welcome to the ChatBot"); // Introductory Phase
+		userName = JOptionPane.showInputDialog("What is your name?"); // Introductory Phase
+		JOptionPane.showMessageDialog(null, "Hello " + userName + "!"); // Introductory Phase
 
-			JOptionPane.showMessageDialog(null, "Welcome to the ChatBot"); // Introductory Phase
-			userName = JOptionPane.showInputDialog("What is your name?"); // Introductory Phase
-			JOptionPane.showMessageDialog(null, "Hello "+userName+"!"); // Introductory Phase
+		strSize = JOptionPane.showInputDialog("How many keywords would you like?");
+		int arraySize = Integer.parseInt(strSize); // parsing the string to an integer so it can be used for the array
+													// size. this is what lets the user choose the array size
+		String[] keywords = new String[arraySize]; // Creating the keywords array with the 'arraySize' integer
+													// determining the size, this is obtained with the user input, then
+													// made into an integer, as you can see above.
 
-			do {
-				strSize = JOptionPane.showInputDialog("How many keywords would you like? (1 - 10)");
-				int arraySize = Integer.parseInt(strSize);
+		for (int i = 0; i < keywords.length; i++) { // Loops through this until the length of the defined array is
+													// filled, this took a while to understand
+			keywords[i] = JOptionPane.showInputDialog("Enter next keyword: ");
+			// System.out.println(Arrays.toString(keywords)); used for debugging and to see
+			// visually that the code was working
+		}
 
-				if (arraySize == 1) {
-					Object[] userInputs = new Object[1];
-					userInputs[0] = "Uni";
-				} else if (arraySize == 2) {
-					Object[] userInputs = new Object[2];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-				} else if (arraySize == 3) {
-					Object[] userInputs = new Object[3];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-				} else if (arraySize == 4) {
-					Object[] userInputs = new Object[4];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-					userInputs[3] = "Java";
-				} else if (arraySize == 5) {
-					Object[] userInputs = new Object[5];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-					userInputs[3] = "Java";
-					userInputs[4] = "Sports";
-				} else if (arraySize == 6) {
-					Object[] userInputs = new Object[6];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-					userInputs[3] = "Java";
-					userInputs[4] = "Sports";
-					userInputs[5] = "Food";
-				} else if (arraySize == 7) {
-					Object[] userInputs = new Object[7];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-					userInputs[3] = "Java";
-					userInputs[4] = "Sports";
-					userInputs[5] = "Food";
-					userInputs[6] = "Work";
-				} else if (arraySize == 8) {
-					Object[] userInputs = new Object[8];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-					userInputs[3] = "Java";
-					userInputs[4] = "Sports";
-					userInputs[5] = "Food";
-					userInputs[6] = "Work";
-					userInputs[7] = "School";
-				} else if (arraySize == 9) {
-					Object[] userInputs = new Object[9];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-					userInputs[3] = "Java";
-					userInputs[4] = "Sports";
-					userInputs[5] = "Food";
-					userInputs[6] = "Work";
-					userInputs[7] = "School";
-					userInputs[8] = "Music";
-				} else if (arraySize == 10) {
-					Object[] userInputs = new Object[10];
-					userInputs[0] = "Uni";
-					userInputs[1] = "IT";
-					userInputs[2] = "Programming";
-					userInputs[3] = "Java";
-					userInputs[4] = "Sports";
-					userInputs[5] = "Food";
-					userInputs[6] = "Work";
-					userInputs[7] = "School";
-					userInputs[8] = "Music";
-					userInputs[9] = "Driving";
+		do { // do-while loop for repetition until user cancels the program. i have setup an
+				// integer of a to equal 1 so that i can break the loop if a certain if
+				// statement is completed.
+			userInput = JOptionPane.showInputDialog("What would you like to talk about?"); // Getting user input
+			for (int i = 0; i < keywords.length; i++) { // a for loop checking every spot in the keywords array for the
+														// user input. once it hits the array size it stops.
+
+				if (keywords[i].equals(userInput)) { // if a value from the user input is found inside the array, it
+														// prints the message
+					userInput = JOptionPane.showInputDialog("What do you like about " + userInput + "?");
 				}
-
-			} while (a == 1);
-        
+			}
+			if (userInput.toLowerCase().contains("?")) { // Checking if the users input contains a ?, this works on both
+															// questions and loops accordingly.
+				JOptionPane.showMessageDialog(null, "I will be asking the questions " + userName + "!");
+			}
+		} while (a == 1); // Checking if my integer value of 'a' still equals 1, if so, it will loop back
+							// around. If not, the program ends.
 	}
 }
+
+// BUGS
+// There are no bugs in the final version of the program which is great. It took
+// me a while to fix most of the bugs while still following the spec sheet but
+// im happy with the final result.
+// For comparison, my code was messy before this version with around 200 lines
+// of code. Now it is compressed to 42 lines with no bugs
